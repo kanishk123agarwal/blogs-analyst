@@ -2,12 +2,12 @@ const express=require('express');
 // const fetch=require('node-fetch')
 const bodyParser=require('body-parser')
 const _ = require('lodash')
-
+require('dotenv').config();
 const app=express();
 const port=3000;
 
-const APIUrl = 'https://intent-kit-16.hasura.app/api/rest/blogs';
-const AdminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
+const APIUrl = process.env.HASURA_API_URL;
+const AdminSecret = process.env.HASURA_ADMIN_SECRET;
 
 let blogData=[];
 
