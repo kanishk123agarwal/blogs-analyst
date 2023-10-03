@@ -18,7 +18,7 @@ const analyzeBlogData=async(req,res,next)=>{
         // fetch blog data using curl
         const response=await fetch.default(APIUrl,{
             method:'GET',
-            headers:{
+           headers:{
                 'Content-Type':'application/json',
                 'x-hasura-admin-secret':AdminSecret
             }
